@@ -105,3 +105,100 @@ section h2 {
 #abstract {
     align-items: center;
 }
+
+
+
+
+
+
+
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header, .image-section, section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.image-section, section {
+    margin-bottom: 100px;
+}
+
+/* Center the buttons and put them on the same line */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.buttons a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.buttons a:hover {
+    background-color: #555;
+}
+
+/* Section titles (like Abstract, Pipeline, etc.) */
+section h2 {
+    margin-bottom: 20px;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.description, section p {
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Style the abstract section */
+#abstract {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 5px;
+}
+
+.abstract-text {
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Center the BibTeX code block, but don't align the text inside */
+.bibtex-code {
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: monospace;
+    text-align: left; /* Keep the text left-aligned */
+    width: 100%;
+    /* max-width: 800px; */
+    border-radius: 5px;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+section h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%; 
+}

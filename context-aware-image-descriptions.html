@@ -40,28 +40,56 @@
         <!-- Abstract Section -->
         <section id="abstract">
             <h2>Abstract</h2>
-            <p class="abstract-text">Blind and low vision (BLV) internet users access images on the web via text descriptions. New vision-to-language models such as GPT-V, Gemini, and LLaVa can now provide detailed image descriptions on-demand. While prior research and guidelines state that BLV audiences' information preferences depend on the context of the image, existing tools for accessing vision-to-language models provide only context-free image descriptions by generating descriptions for the image alone without considering the surrounding webpage context. To explore how to integrate image context into image descriptions, we designed a Chrome Extension that automatically extracts webpage context to inform GPT-4V-generated image descriptions. We gained feedback from 12 BLV participants in a user study comparing typical context-free image descriptions to context-aware image descriptions. We then further evaluated our context-informed image descriptions with a technical evaluation. Our user evaluation demonstrated that BLV participants frequently prefer context-aware descriptions to context-free descriptions. BLV participants also rated context-aware descriptions significantly higher in quality, imaginability, relevance, and plausibility. All participants shared that they wanted to use context-aware descriptions in the future and highlighted the potential for use in online shopping, social media, news, and personal interest blogs.</p>
+            <p class="abstract-text">Blind and low vision (BLV) internet users access images on the web via text descriptions. 
+                New vision-to-language models such as GPT-V, Gemini, and LLaVa can now provide detailed image descriptions on-demand. 
+                While prior research and guidelines state that BLV audiences' information preferences depend on the context of the image, 
+                existing tools for accessing vision-to-language models provide only context-free image descriptions by generating descriptions 
+                for the image alone without considering the surrounding webpage context. To explore how to integrate image context into image descriptions, 
+                we designed a Chrome Extension that automatically extracts webpage context to inform GPT-4V-generated image descriptions. 
+                We gained feedback from 12 BLV participants in a user study comparing typical context-free image descriptions to context-aware image descriptions. 
+                We then further evaluated our context-informed image descriptions with a technical evaluation. 
+                Our user evaluation demonstrated that BLV participants frequently prefer context-aware descriptions to context-free descriptions. 
+                BLV participants also rated context-aware descriptions significantly higher in quality, imaginability, relevance, and plausibility. 
+                All participants shared that they wanted to use context-aware descriptions in the future and highlighted the potential for use 
+                in online shopping, social media, news, and personal interest blogs.</p>
+        </section>
+
+        <!-- Abstract Section -->
+        <section id="problem">
+            <h2>Types of Webpage Context</h2>
+            <img src="media/Webpage-Context.png" alt="Examples of webpage context" class="section-image"  style="width: 70%; align-content: center;">
+            <p >Examples of webpage context that may impact the
+                visual interpretation of an image and how the image is described. Most of these webpage elements are selected intentionally by webpage authors (e.g., position of text content) to
+                convey importance and structure to audience members, but others are dynamically added (e.g., advertisements)</p>
         </section>
 
         <!-- Pipeline Section -->
         <section id="pipeline">
             <h2>Pipeline</h2>
             <img src="media/System.png" alt="Teaser Diagram" class="section-image">
-            <p>Explanation of the pipeline goes here, describing the steps in the research process.</p>
+            <p>The system takes a webpage and a selected webpage image as selected by the user, then extracts all of the text elements on the page. 
+                It analyzes the webpage to get an image relevance score for each text element. Our score considers the distance between the text element and the target image, 
+                position of the text in comparison to the image, and the CLIP score similarity between the image and the text. 
+                For each text element, we combine these scores together to achieve the final relevance score. We use the extracted context text and its scores to inform the final context-aware description.
+                </p>
         </section>
 
         <!-- System Section -->
         <section id="system">
             <h2>System</h2>
             <img src="media/Interface.png" alt="Interface" class="section-image" style="width: 60%; align-content: center;">
-            <p>Description of the system architecture and components goes here, detailing how each part works together.</p>
+            <p>When a user clicks on an image in a website (right), our extension adds both long and short versions of the context-free and context-aware descriptions to a separate extension window (left).</p>
         </section>
 
         <!-- Results Section -->
         <section id="results">
             <h2>Results</h2>
-            <img src="media/Result.png" alt="Results Graph" class="section-image">
-            <p>Details of the experimental results, charts, and data go here to demonstrate the effectiveness of the system.</p>
+            <img src="media/Task-1.png" alt="Results Graph" class="section-image">
+            <p>Example context-free and context-aware descriptions for Task 1 in the user study</p>
+            <br><br>
+            <img src="media/Task-2.png" alt="Results Graph" class="section-image" style="width: 60%; align-content: center;">
+            <p>Example context-free and context-aware descriptions for a website and image selected by P8.</p>
+
         </section>
 
         <!-- BibTeX Section -->
