@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context-Aware Image Descriptions for Web Accessibility</title>
+    <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Context-Aware Image Descriptions for Web Accessibility</h1>
+            <p class="authors">
+                <a href="#" class="author">Ananya Gubbi Mohanbabu</a>,
+                <!-- <sup>*</sup>,  -->
+                <a href="https://amypavel.com/" class="author">Amy Pavel</a>
+                <!-- <sup>*</sup>,  -->
+            </p>
+            <p class="institution">UT Austin</p>
+            <p class="conference">ASSETS 2024</p>
+            <!-- <p class="equal-contribution">*Indicates Equal Contribution</p> -->
+        </header>
+
+        <div class="buttons">
+            <a href="https://arxiv.org/pdf/2409.03054v1" class="button pdf">📄 PDF</a>
+            <!-- <a href="#" class="button supplementary">📄 Supplementary</a> -->
+            <a href="#" class="button code">💻 Code</a>
+            <a href="https://arxiv.org/abs/2409.03054v1" class="button arxiv">⚙ arXiv</a>
+        </div>
+
+        <div class="image-section">
+            <img src="media/Teaser.png" alt="Teaser Diagram" class="section-image">
+            <p class="description">
+                Our system provides context-aware descriptions for images by considering the image along with extracted details
+                from the image source to craft a description that uses correct visual terminology (e.g., chenille texture rather than velvet) and
+                focuses on the relevant item (e.g., the sofa rather than the room).
+            </p>
+        </div>
+
+        <!-- Abstract Section -->
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <p class="abstract-text">Blind and low vision (BLV) internet users access images on the web via text descriptions. New vision-to-language models such as GPT-V, Gemini, and LLaVa can now provide detailed image descriptions on-demand. While prior research and guidelines state that BLV audiences' information preferences depend on the context of the image, existing tools for accessing vision-to-language models provide only context-free image descriptions by generating descriptions for the image alone without considering the surrounding webpage context. To explore how to integrate image context into image descriptions, we designed a Chrome Extension that automatically extracts webpage context to inform GPT-4V-generated image descriptions. We gained feedback from 12 BLV participants in a user study comparing typical context-free image descriptions to context-aware image descriptions. We then further evaluated our context-informed image descriptions with a technical evaluation. Our user evaluation demonstrated that BLV participants frequently prefer context-aware descriptions to context-free descriptions. BLV participants also rated context-aware descriptions significantly higher in quality, imaginability, relevance, and plausibility. All participants shared that they wanted to use context-aware descriptions in the future and highlighted the potential for use in online shopping, social media, news, and personal interest blogs.</p>
+        </section>
+
+        <!-- Pipeline Section -->
+        <section id="pipeline">
+            <h2>Pipeline</h2>
+            <img src="media/System.png" alt="Teaser Diagram" class="section-image">
+            <p>Explanation of the pipeline goes here, describing the steps in the research process.</p>
+        </section>
+
+        <!-- System Section -->
+        <section id="system">
+            <h2>System</h2>
+            <img src="media/Interface.png" alt="Interface" class="section-image" style="width: 60%; align-content: center;">
+            <p>Description of the system architecture and components goes here, detailing how each part works together.</p>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results">
+            <h2>Results</h2>
+            <img src="media/Result.png" alt="Results Graph" class="section-image">
+            <p>Details of the experimental results, charts, and data go here to demonstrate the effectiveness of the system.</p>
+        </section>
+
+        <!-- BibTeX Section -->
+        <section id="bibtex">
+            <h2>BibTeX</h2>
+            <div class="bibtex-code">
+<pre>
+@article{mohanbabu2024context,
+    title={Context-Aware Image Descriptions for Web Accessibility},
+    author={Mohanbabu, Ananya Gubbi and Pavel, Amy},
+    journal={arXiv preprint arXiv:2409.03054},
+    year={2024}
+}
+</pre>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

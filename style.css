@@ -1,0 +1,380 @@
+:root {
+    --z-index-overlay: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+/* Logo */
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+}
+
+/* Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: var(--z-index-overlay);
+    display: flex;
+}
+
+nav {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    padding: 15px 19% 15px 17%;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    letter-spacing: 0.2px;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #008AFC;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu*/
+.header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 18px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+@media (min-width: 680px) {
+    .header li {
+        float: left;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 680px) {
+    .header li {
+        float: left;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Section-1 */
+section {
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 8% 17% 0px;
+}
+
+.wrapper {
+    margin-top: 5%;
+}
+
+.wrapper div {
+    padding: 10px 10px 10px 0;
+}
+
+.split-left {
+    float: left;
+    margin: 3% 20px 0 0;
+    width: 60%;
+}
+
+.name {
+    padding-bottom: 30px;
+}
+
+.split-left p {
+    letter-spacing: 0.1px;
+    padding-left: 0;
+    line-height: 25px;
+    margin-bottom: 10%;
+}
+
+.split-left ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 30px 10px 0;
+}
+
+.split-left ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    letter-spacing: 0.2px;
+}
+
+.split-left ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #008AFC;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.split-left ul li a:hover::after {
+    width: 100%;
+}
+
+.bar {
+    margin: 5px 5% 5px 0;
+    color: #008AFC;
+}
+
+.split-right {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1096px) {
+    .split-left {
+        float: none;
+        margin-right: 0;
+        width: auto;
+        border: 0;
+    }
+
+    .split-right .profile-photo {
+        margin-left: 0px;
+    }
+}
+
+
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    margin-left: 20%;
+    max-width: 40%;
+    max-height: 100%;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+/* Section-2 */
+a {
+    text-decoration: none;
+}
+
+.row-cards {
+    margin: 9% 17%;
+}
+
+.row-cards .research {
+    margin: 0 0 30px 0;
+}
+
+.card {
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.10), 0 2px 2px rgba(0, 0, 0, 0.10);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    transition: transform .2s;
+}
+
+.card .card-body {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+}
+
+.card .title {
+    color: black;
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card .author {
+    color: black;
+    padding-bottom: 15px;
+    font-size: 16px;
+}
+
+
+.card .description {
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    padding-bottom: 15px;
+}
+
+.card .author .ananya {
+    color: #008AFC;
+}
+
+
+.additional {
+    margin: 8% 17% 5%;
+    padding: 0 0 50px;
+}
+
+.misc {
+    margin: 0 0 30px 0;
+}
+
+.additional ul {
+    padding: 25px;
+}
+
+.additional ul li {
+    line-height: 25px;
+}
+
+.external-link {
+    font-size: 16px;
+    color: #008AFC;
+}
+
+.paper-image {
+    width: 200px; 
+    height: auto; 
+    margin-right: 20px;
+}
+
+.paper-links { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    align-items: center;
+}
+
+.papers ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    letter-spacing: 0.2px;
+}
+
+.papers ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #008AFC;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.papers ul li a:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color:  black;
+    padding: 60px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+    line-height: normal;
+    font-weight: 500;
+}
+
+.authors {
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.authors a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.authors a:hover {
+    text-decoration: underline;
+}
+
+.institution,
+.conference,
+.equal-contribution {
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Section Styling */
+section {
+    margin: 40px 0;
+    align-items: center;
+    /* text-align: left; */
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 450;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.bibtex-code {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+    font-family: monospace;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.bibtex-code pre {
+    white-space: pre-wrap;
+}
+
+
+#abstract {
+    align-items: center;
+}
